@@ -1,12 +1,11 @@
 package com.example.accountBook.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -15,10 +14,13 @@ public class OrderHistory {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private LocalDate orderDate;
+
     private int orderPrice;
 
     @Builder
-    public OrderHistory(int orderPrice) {
+    public OrderHistory(LocalDate orderDate, int orderPrice) {
+        this.orderDate = orderDate;
         this.orderPrice = orderPrice;
     }
 }

@@ -4,14 +4,19 @@ import com.example.accountBook.domain.OrderHistory;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 @Getter
 @NoArgsConstructor
 public class OrderHistoryRequestDto {
+    private LocalDate orderDate;
     private int orderPrice;
 
     public OrderHistory toEntity() {
         return OrderHistory.builder()
-                .orderPrice(this.orderPrice)
+                .orderDate(orderDate)
+                .orderPrice(orderPrice)
                 .build();
     }
 }
