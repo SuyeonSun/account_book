@@ -21,7 +21,7 @@ public class OrderHistoryController {
     }
 
     @GetMapping("/list")
-    public List<OrderHistory> findAllItems() {
+    public List<OrderHistoryItemResponseDto> findAllItems() {
         return orderHistoryService.findAllItems();
     }
 }

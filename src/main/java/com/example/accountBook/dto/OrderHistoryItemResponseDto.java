@@ -1,9 +1,11 @@
 package com.example.accountBook.dto;
 
 import com.example.accountBook.domain.OrderHistory;
+import lombok.Getter;
 
 import java.time.LocalDate;
 
+@Getter
 public class OrderHistoryItemResponseDto {
     private Long id;
 
@@ -11,7 +13,6 @@ public class OrderHistoryItemResponseDto {
 
     private int orderPrice;
 
-    // TODO
     public OrderHistoryItemResponseDto(OrderHistory entity) {
         this.id = entity.getId();
         this.orderDate = entity.getOrderDate();
