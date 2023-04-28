@@ -1,7 +1,7 @@
 package com.example.accountBook.controller;
 
-import com.example.accountBook.dto.OrderHistoryRequestDto;
-import com.example.accountBook.service.OrderHistoryService;
+import com.example.accountBook.dto.BudgetRequestDto;
+import com.example.accountBook.service.BudgetService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/order-history")
-public class OrderHistoryController {
-    private final OrderHistoryService orderHistoryService;
+@RequestMapping("/budget")
+public class BudgetController {
+    private final BudgetService budgetService;
 
     @PostMapping("")
-    public void save(@RequestBody OrderHistoryRequestDto requestDto) {
-        orderHistoryService.save(requestDto);
+    public void save(@RequestBody BudgetRequestDto requestDto) {
+        budgetService.save(requestDto);
     }
 }
