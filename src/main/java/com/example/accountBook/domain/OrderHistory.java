@@ -23,4 +23,10 @@ public class OrderHistory {
         this.orderDate = orderDate;
         this.orderPrice = orderPrice;
     }
+
+    public void update(LocalDate orderDate, int orderPrice) {
+        this.orderDate = orderDate;
+        this.orderPrice = orderPrice;
+        System.out.println("===" + this.orderDate + " " + this.orderPrice);
+    }
 }

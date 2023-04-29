@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 @Getter
 @NoArgsConstructor
-public class OrderHistoryRequestDto {
+public class OrderHistorySaveRequestDto {
     private LocalDate orderDate;
     private int orderPrice;
 
